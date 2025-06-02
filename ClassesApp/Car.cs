@@ -12,11 +12,16 @@ namespace ClassesApp
         // private hides the variable from other classes
         private string _model = "";
         private string _brand = "";
+
+        // Property
+        public string Model { get => _model; set => _model = value; }
+        public string Brand { get => _brand; set => _brand = value; }
+
         //Constructor
         public Car(string model, string brand) 
         {
-            _model = model;
-            _brand = brand;
+            Model = model;
+            Brand = brand;
             Console.WriteLine($"A {brand} of the {model} has been created");
             Console.ReadKey();
         }
