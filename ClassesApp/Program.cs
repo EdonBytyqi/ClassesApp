@@ -12,6 +12,10 @@
             Console.WriteLine("Brand is " + audi.Brand);
             Console.WriteLine("Brand is " + bmw.Brand);
 
+            Costumer earl = new Costumer("Earl");
+            Costumer frank = new Costumer("Frank","Hochdorferstrasse 25", "123456789");
+            Console.WriteLine("Name of Costumer is " + earl.Name);
+
             Console.ReadKey();
         }
     }
