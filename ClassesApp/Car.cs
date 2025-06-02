@@ -8,11 +8,16 @@ namespace ClassesApp
 {
     internal class Car
     {
+        // member variable
+        // private hides the variable from other classes
+        private string _model = "";
+        private string _brand = "";
         //Constructor
-        public Car() 
+        public Car(string model, string brand) 
         {
-            Console.WriteLine("An Object of Car " +
-                "has been created");
+            _model = model;
+            _brand = brand;
+            Console.WriteLine($"A {brand} of the {model} has been created");
             Console.ReadKey();
         }
     }
