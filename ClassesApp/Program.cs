@@ -4,14 +4,15 @@
     {
         static void Main(string[] args)
         {
-            Car audi = new Car("A3", "audi");
-            Car bmw = new Car("i7", "bmw");
+            Car audi = new Car("A3", "audi", false);
+            Car bmw = new Car("i7", "bmw", true);
 
-            Console.WriteLine("Please enter the Brand name");
-            // setting brand
-            audi.Brand = Console.ReadLine();
+           
             // getting brand
-            Console.WriteLine("You entered " + audi.Brand);
+            Console.WriteLine("Brand is " + audi.Brand);
+            Console.WriteLine("Brand is " + bmw.Brand);
+
+            Console.ReadKey();
         }
     }
 }

@@ -10,12 +10,28 @@ namespace ClassesApp
     {
         // member variable
         // private hides the variable from other classes
+        // Backing Field of the Model Property
         private string _model = "";
         private string _brand = "";
 
+        private bool _isLuxury = false;
+
+
         // Property
         public string Model { get => _model; set => _model = value; }
-        public string Brand { get => _brand;
+        public string Brand {
+
+            get 
+            {
+                if (_isLuxury)
+                {
+                    return _brand + " - Luxury Edition";
+                }
+                else
+                {
+                    return _brand;
+                }
+            } 
 
             set {
                 if (string.IsNullOrEmpty(value))
@@ -30,13 +46,17 @@ namespace ClassesApp
             }             
         }
 
+        public bool IsLuxury { get => _isLuxury; set => _isLuxury = value; }
+
         //Constructor
-        public Car(string model, string brand) 
+        public Car(string model, string brand, bool isLuxury
+            ) 
         {
             Model = model;
             Brand = brand;
             Console.WriteLine($"A {brand} of the {model} has been created");
             Console.ReadKey();
+            IsLuxury = isLuxury;
         }
     }
 }
